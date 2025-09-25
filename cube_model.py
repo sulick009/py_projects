@@ -67,9 +67,9 @@ class Cube_model:
         self.sides["w"][3] = self.sides["o"][5]
         self.sides["w"][6] = self.sides["o"][2]
     
-        self.sides["o"][2] = self.sides["y"][0]
+        self.sides["o"][8] = self.sides["y"][0]
         self.sides["o"][5] = self.sides["y"][3]
-        self.sides["o"][8] = self.sides["y"][6]
+        self.sides["o"][2] = self.sides["y"][6]
     
         self.sides["y"][0] = temp[0]
         self.sides["y"][3] = temp[1]
