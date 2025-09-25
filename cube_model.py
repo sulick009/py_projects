@@ -7,7 +7,7 @@ class Cube_model:
             "b": ["b"]*9,
             "y": ["y"]*9,
             "o": ["o"]*9,
-        }
+        } # ["1","2","3","4","5","6","7","8","9",]
     def upload(self):
         print('Введите состояние своего кубика, держа белым сверху, ' \
         'зеленым слева, красным к себе, синим справа, желтым снизу и оранжевым сзади')
@@ -32,13 +32,13 @@ class Cube_model:
         self.sides["r"][5] = self.sides["y"][5]
         self.sides["r"][8] = self.sides["y"][8]
 
-        self.sides["y"][2] = self.sides["o"][2]
-        self.sides["y"][5] = self.sides["o"][5]
-        self.sides["y"][8] = self.sides["o"][8]
+        self.sides["y"][2] = self.sides["o"][6]
+        self.sides["y"][5] = self.sides["o"][3]
+        self.sides["y"][8] = self.sides["o"][0]
 
-        self.sides["o"][2] = self.sides["w"][2]
-        self.sides["o"][5] = self.sides["w"][5]
-        self.sides["o"][8] = self.sides["w"][8]
+        self.sides["o"][0] = self.sides["w"][8]
+        self.sides["o"][3] = self.sides["w"][5]
+        self.sides["o"][6] = self.sides["w"][2]
 
         self.sides["w"][2] = temp[0]
         self.sides["w"][5] = temp[1]
@@ -177,17 +177,17 @@ class Cube_model:
     def rotate_f(self):
         temp = [self.sides["w"][6], self.sides["w"][7], self.sides["w"][8]]
 
-        self.sides["w"][6] = self.sides["g"][2]
+        self.sides["w"][6] = self.sides["g"][8]
         self.sides["w"][7] = self.sides["g"][5]
-        self.sides["w"][8] = self.sides["g"][8]
+        self.sides["w"][8] = self.sides["g"][2]
 
         self.sides["g"][2] = self.sides["y"][0]
         self.sides["g"][5] = self.sides["y"][1]
         self.sides["g"][8] = self.sides["y"][2]
 
-        self.sides["y"][0] = self.sides["b"][0]
+        self.sides["y"][0] = self.sides["b"][6]
         self.sides["y"][1] = self.sides["b"][3]
-        self.sides["y"][2] = self.sides["b"][6]
+        self.sides["y"][2] = self.sides["b"][0]
 
         self.sides["b"][0] = temp[0]
         self.sides["b"][3] = temp[1]
