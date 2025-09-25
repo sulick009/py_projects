@@ -208,23 +208,23 @@ class Cube_model:
         self.rotate_b()
 
     def rotate_b(self):
-        temp = [self.sides["w"][6], self.sides["w"][7], self.sides["w"][8]]
+        temp = [self.sides["w"][0], self.sides["w"][1], self.sides["w"][2]]
 
         self.sides["w"][0] = self.sides["b"][2]
         self.sides["w"][1] = self.sides["b"][5]
         self.sides["w"][2] = self.sides["b"][8]
 
-        self.sides["b"][2] = self.sides["y"][6]
+        self.sides["b"][2] = self.sides["y"][8]
         self.sides["b"][5] = self.sides["y"][7]
-        self.sides["b"][8] = self.sides["y"][8]
+        self.sides["b"][8] = self.sides["y"][6]
 
         self.sides["y"][6] = self.sides["g"][0]
         self.sides["y"][7] = self.sides["g"][3]
         self.sides["y"][8] = self.sides["g"][6]
 
-        self.sides["g"][0] = temp[0]
+        self.sides["g"][0] = temp[2]
         self.sides["g"][3] = temp[1]
-        self.sides["g"][6] = temp[2]
+        self.sides["g"][6] = temp[0]
 
         self.rotate_face_clockwise("o")
 
