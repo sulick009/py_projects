@@ -49,4 +49,5 @@ def do_moves(text, cube):
         if move not in actions:
             print(f"Wrong scramble: {move}")
             break
-        actions[move]()  # вызов метода
+        actions[move]()
+        print(move)
