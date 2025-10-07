@@ -45,7 +45,6 @@ class Cube_model:
         self.sides["w"][8] = temp[2]
     
         self.rotate_face_clockwise("b")
-
     
     def rotate_r2(self):
         self.rotate_r()
@@ -236,6 +235,3 @@ class Cube_model:
     def rotate_b2(self):
         self.rotate_b()
         self.rotate_b()
-
-    
-        

@@ -335,6 +335,6 @@ def move_edge(start_pos, target):
         elif(start_pos == 24):
             do_moves("b u rr ur", cube)
 
-do_moves("B2 D2 B2 U L2 F2 D L2 F2 D' U F2 L' F L2 D' R D' R2 D'", cube)
+do_moves("U2 L U F U B2 U2 L' B U' D R2 B2 U' R2 D B2 L2 D' L2 U", cube)
 solve_cross(cube)
 pprint(cube.sides)

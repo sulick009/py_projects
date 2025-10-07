@@ -16,7 +16,6 @@ def do_moves(text, cube):
     scramble = lower_text.split()
     scramble = [move.replace("'", "r") for move in scramble]
 
-
     actions = {
         "r2": cube.rotate_r2,
         "b": cube.rotate_b,
